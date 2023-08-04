@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/46282a7b-a97f-40f4-850d-18555648aa91/resourceGroups/web-app/providers/Microsoft.Web/sites/buguru",
+    "appService.deploySubpath": "."
+}

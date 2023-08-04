@@ -1,0 +1,23 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="img.css">
+
+        <script>
+        function on(){
+          document.getElementById("bulb").src = "bulbon.png";
+      }
+      
+      function off(){
+          document.getElementById("bulb").src = "bulboff.png";
+      }
+        </script>
+    </head>
+    <body >
+      <img class="center" id="bulb" src="bulboff.png" width="250px"/> <br>
+      <div>
+        <button  class="center" type="button" onclick="on()">ON</button> <br>
+       <button  class="center" type="button" onclick="off()">OFF</button>
+      </div>
+   
+    </body>
+</html>

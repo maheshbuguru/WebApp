@@ -1,0 +1,159 @@
+<html>
+  <head>
+   
+  </head>  
+
+  <body>
+    <u><h1>Even/Odd Programming!</h1></u>
+
+    <input type="text" id="txtNumber"/>
+    <input type="button" value="Submit" id="btnSubmit" onclick="checkEvenNumber()" />
+  </br></br>
+Result: <span id="spnResult"></span>
+
+
+<hr>
+
+<u><h1>Positive Number Check Programming!</h1></u>
+
+    <input type="text" id="txtNumber2"/>
+    <input type="button" value="Submit" id="btnSubmit2" onclick="checkPositiveOrNegativeNumber()" />
+  </br></br>
+Result: <span id="spnResult2"></span>
+
+<hr>
+
+<u><h1>leap year Check Programming!</h1></u>
+
+    <input type="text" id="txtNumber3"/>
+    <input type="button" value="Submit" id="btnSubmit2" onclick="checkLeapYear()" />
+  </br></br>
+Result: <span id="spnResult3"></span>
+
+<hr>
+
+<u><h1>Vote-Eligibility Programming!</h1></u>
+
+    <input type="text" id="txtNumber4"/>
+    <input type="button" value="Submit" id="btnSubmit3" onclick="voteEligibility()" />
+  </br></br>
+Result: <span id="spnResult4"></span>
+
+<hr>
+
+<u><h1>ticketBooking Programming!</h1></u>
+
+    <input type="text" id="txtNumber5"/>
+    <input type="button" value="Submit" id="btnSubmit4" onclick="ticketBooking()" />
+  </br></br>
+Result: <span id="spnResult5"></span>
+
+
+
+
+
+<script>
+//   const number = prompt("enter a number: ");
+    
+    
+
+function checkEvenNumber()
+{
+ var number = document.getElementById("txtNumber").value;
+
+ 
+ var numbers = /^[0-9]+$/;
+ if(numbers.test(number)){
+  const result = (number % 2 == 0) ? "even" : "odd";
+  var output = "The number is <b>" +  result + "</b>";     
+ }
+ else{
+  output = "<font color='red'>Error: Please enter number only.</font>"
+ }
+
+
+ document.getElementById("spnResult").innerHTML = output;
+    
+    
+//    document.write('the number is ' +  result);
+//    alert('the number is ' +  result);
+
+   
+}   
+
+
+
+function checkPositiveOrNegativeNumber()
+{
+var number = document.getElementById("txtNumber2").value;
+var result = "";
+if(number > 0)
+{
+result = "<font color='green'> Positive Number </font>";
+}
+else
+{
+    result = "<font color='red'> Negative Number</font>";
+}
+
+document.getElementById("spnResult2").innerHTML = "<b>" + result + "</b>";
+
+}
+
+
+function checkLeapYear()
+{
+var year = document.getElementById("txtNumber3").value;
+var result = "";
+if((0 == year % 4) && (0 != year % 100) || (0 == year % 400))
+{
+    result = "<font color='green'> leap year </font>";
+}
+else
+{
+    result = "<font color='red'> not a leap year</font>";
+}
+
+document.getElementById("spnResult3").innerHTML = "<b>" + result + "</b>";
+
+}
+
+function voteEligibility()
+{
+  const age = document.getElementById("txtNumber4").value;
+  var result = "";
+  const voterage = 18;
+  if(age>=voterage)
+  {
+      // result = ("eligible for vote")
+      result = "<font color='green'> Eligible for vote </font>";
+
+  }
+  else
+  {
+      // result = ("not eligible for vote")
+      result = "<font color='red'> Not eligible for vote</font>";
+
+  }
+
+  document.getElementById("spnResult4").innerHTML = "<b>" + result + "</b>";
+}
+
+
+// function ticketBooking()
+// {
+//     var num1 = 500;
+//     var num2 = 10/100;
+//     var totalValue = num1 - (num1 * num2)
+//     {
+//        result = "<font color='green'> totalvalue</font>";
+//     }
+//     document.getElementById("spnResult5").innerHTML = "<b>" + result + "</b>";
+
+// }
+
+    </script>
+  </body>
+</html>
+
+

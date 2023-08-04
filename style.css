@@ -1,0 +1,32 @@
+navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+
+}
+
+navbar ul {
+    display: flex;
+}
+
+navbar ul li {
+    list-style: none;
+    color: white;
+    font-size: 0.6;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5px;
+}
+
+.left {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+a {
+    line-break: none;
+    color: white;
+}
+
+

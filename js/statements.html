@@ -1,0 +1,33 @@
+<html>
+<head>
+  <script>
+
+    function f1() {
+      let number = parseInt(prompt("Enter a number"));
+      for (let i = 1; i <= number; i++) {
+        let line = "";
+        for (let j = 1; j <= i; j++) {
+          line = line + " * ";
+        }
+        let previousText = document.getElementById("spanSeries").innerHTML;
+        if (i % 2 == 0) {
+          var formatted = "<font color ='red'>" + previousText + line + "</font><br>";
+        }
+        else {
+          formatted = "<font color ='grey'>" + previousText + line + "</font><br>";
+        }
+        document.getElementById("spanSeries").innerHTML = formatted;
+
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="f1()">Print Star Series</button>
+  <br> <br>
+  <span id="spanSeries"></span>
+</body>
+
+</html>

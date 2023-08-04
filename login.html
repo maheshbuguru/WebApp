@@ -1,0 +1,29 @@
+<body bgcolor="red">
+  <div>
+    User ID: <input type="text" id="txtUserId"/><br>
+    Password: <input type="text" id="txtPassword"/><br>
+
+    <input type="button" value="Submit" onclick="validation()"/>
+    <br>
+
+    <span id="spnErrorMessage" style="color: red;"/>
+
+    <script>
+        function validation(){
+          var userid =  document.getElementById("txtUserId").value;
+          var pwd = document.getElementById("txtPassword").value;
+
+          if(userid == "admin" && pwd == "abcd"){            
+            window.location.href = "index.html";
+          }
+          else{
+              document.getElementById("spnErrorMessage").innerHTML = "Login Not Successful";
+          }
+        }
+    </script>
+
+    
+  
+
+</div>  
+</body>
