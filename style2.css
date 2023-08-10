@@ -1,7 +1,32 @@
-h3{
+/* h3{
     background-color:aqua;
     text-align: center;
     font-size: xx-large;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} */
+
+div {
+    background-color: antiquewhite;
+    width: 76rem;
+    padding: 40px;
+    /* border: 5px solid green; */
+    margin: 20px;
+
+}
+
+div.dotted {
+    outline-style: double;
+    outline-color: rgb(51, 30, 3);
+
+
+}
+
+h1 {
+    text-align: center;
+    background: #dd1515;
+    border: #0f0d0d;
+    outline-style: dotted;
+    animation-delay: 2s;
+    animation: mymove 5s infinite;
 }

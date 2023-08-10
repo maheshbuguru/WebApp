@@ -1,0 +1,176 @@
+<head>
+    <style>
+        #table2 td {
+            border: 1px solid black;
+
+        }
+
+        .col {
+            text-align: right;
+        }
+
+        .mandatory {
+            color: red;
+        }
+
+        center {
+            background-color: rgb(225, 233, 227);
+            /* background-color: rgb(22, 192, 59); */
+        }
+
+        .input {
+            font-weight: bold;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            /* color: black; */
+            font-weight: bold;
+        }
+
+        td,
+        th {
+            text-align: left;
+            padding: 10px;
+        }
+
+        h2 {
+            padding: 2px;
+        }
+    </style>
+</head>
+
+<html>
+
+<body>
+    <center>
+        <h2 style="color: blue;">College Application Form</h2>
+        <table id="table1">
+            <tr>
+                <td class="col">Collage application no : </td>
+                <td><input type="text,number" readonly id="CApplicationno" style="background-color:lightgray;"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="col">Application name: <span class="mandatory">*</span></td>
+                <td><input type="text" id="aname"></td>
+                <td><span id="errorName" class="mandatory"></span></td>
+            </tr>
+            <tr>
+                <td class="col">Gender: <span class="mandatory">*</span></td>
+                <td><select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="col">Dob: <span class="mandatory">*</span></td>
+                <td><input type="date" id="dob"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="col">Address:</td>
+                <td><input type="text" id="address"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="col">Pincode:</td>
+                <td><input type="number" id="pincode"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="col">HSE / 10th Percent:</td>
+                <td><input type="number" id="hse"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <input text="bold" type="button" onclick="myFunction()" value="Submit form">
+                </td>
+            </tr>
+        </table>
+
+
+        <br>
+
+
+
+        <table id="table2">
+            <tr>
+                <td>CANo</td>
+                <td>Applicant Name</td>
+                <td>Gender</td>
+                <td>Address</td>
+                <td>Pincode</td>
+                <td>HSE / 10th Percent</td>
+                <td>DOB</td>
+
+            </tr>
+        </table>
+
+        <script>
+            var number = 1;
+            document.getElementById("CApplicationno").value = "C00" + number;
+
+
+            function myFunction() {
+                var txtName = document.getElementById("aname").value;
+                console.log("txtName:" + txtName);
+
+                if (txtName == null || txtName == "") {
+
+
+                    document.getElementById("errorName").innerHTML = "Applicant Name is mandatory!";
+                    return;
+                }
+                else {
+                    document.getElementById("errorName").innerHTML = "";
+                }
+
+
+
+                var table = document.getElementById("table2");
+                var row = table.insertRow(1);
+
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                var cell6 = row.insertCell(5);
+                var cell7 = row.insertCell(6);
+
+                cell1.innerHTML = document.getElementById("CApplicationno").value;
+                cell2.innerHTML = document.getElementById("aname").value;
+                cell3.innerHTML = document.getElementById("gender").value;
+                cell4.innerHTML = document.getElementById("address").value;
+                cell5.innerHTML = document.getElementById("pincode").value;
+                cell6.innerHTML = document.getElementById("hse").value;
+                cell7.innerHTML = document.getElementById("dob").value;
+
+                number++;
+                document.getElementById("CApplicationno").value = "C00" + number;
+
+                document.getElementById("aname").value = "";
+                document.getElementById("address").value = "";
+                document.getElementById("pincode").value = "";
+                document.getElementById("hse").value = "";
+                document.getElementById("gender").value = "";
+                document.getElementById("dob").value = "";
+
+
+            }
+        </script>
+
+    </center>
+
+</body>
+
+</html>
